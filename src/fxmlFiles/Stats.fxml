@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatsController">
+	<tabs>
+		<Tab text="Par catégorie">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="nextCategorie" layoutX="531.0" layoutY="334.0" mnemonicParsing="false" onAction="#pressedButtonNextCategorie" text="Suivant" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="14.0" />
+                  <Button fx:id="previousCategorie" layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#pressedButtonPreviousCategorie" text="Précédent" visible="false" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" />
+                  <PieChart fx:id="pieChartCategorie" layoutX="2.0" layoutY="1.0" prefHeight="326.0" prefWidth="594.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="1.0" />
+                  <Label fx:id="pieChartHover" layoutX="14.0" layoutY="32.0" text="Label" visible="false" />
+                  <Label fx:id="timeElapsedOnThisCategorie" layoutX="14.0" layoutY="286.0" text="Label" visible="false" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="14.0" />
+                  <Label fx:id="errorLabel" layoutX="28.0" layoutY="136.0" prefHeight="11.0" prefWidth="544.0" text="Il n'y a pas de données ! Commencer par créer des tâches dans organisation !" />
+               </children></AnchorPane>
+			</content>
+		</Tab>
+		<Tab fx:id="tabTask" disable="true" text="Par tâche">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="nextTask" layoutX="531.0" layoutY="332.0" mnemonicParsing="false" onAction="#pressedButtonNextTask" text="Suivant" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                  <Button fx:id="previousTask" layoutX="86.0" layoutY="322.0" mnemonicParsing="false" onAction="#pressedButtonPreviousTask" text="Précédent" visible="false" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" />
+                  <PieChart fx:id="pieChartTask" layoutX="-1.0" layoutY="-1.0" prefHeight="326.0" prefWidth="600.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0" />
+                  <Label fx:id="pieChartHoverTask" layoutX="14.0" layoutY="32.0" text="Label" visible="false" />
+                  <Label fx:id="timeElapsedOnThisTask" layoutX="14.0" layoutY="279.0" text="Label" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="14.0" />
+                  <Label fx:id="errorLabelTask" layoutX="28.0" layoutY="154.0" text="Il n'y a pas de données pour cette tâche ! " AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="154.0" />
+                  <Label fx:id="labelNameCategorie" layoutX="14.0" layoutY="14.0" text="Label" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+               </children></AnchorPane>
+			</content>
+		</Tab>
+	</tabs>
+</TabPane>
